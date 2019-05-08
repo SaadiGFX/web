@@ -1,0 +1,306 @@
+/* BASIC REST CODE FOR TOP.CSS */
+*{margin: 0; padding: 0; font-style: normal; font-family: sans-serif;}
+/* ALL VARIABLES FOR TOP.CSS > FOR ALL DEVICES */
+:root{
+  /* TOP_HEADER VARIABLES */
+  --top_header_height_desktop: 44px; /* for desktop version*/
+  --top_header_height_mobile: 38px;
+  --top_header_bg_color: rgba(255,255,255,1);
+  /* if not needed then simply comment the shadow color */
+  --top_header_shadow_color: rgba(33,33,33,0.25);
+  /* LOGO VARIABLES */
+  --logo_font_family: 'Roboto', sans-serif;
+  --logo_font_size_desktop: 32px; /* for desktop version */
+  --logo_font_size_mobile: 26px; /* for mobile version */
+  --logo_line_height_desktop: var(--top_header_height_desktop); /* for desktop version */
+  --logo_line_height_mobile: var(--top_header_height_mobile); /* for mobile version */
+  --logo_color: rgba(0,200,83,1);
+  /* NAVIGATION ITEMS VARIABLES */
+  --nav_item_font_family: 'Montserrat', sans-serif;
+  --nav_item_color: rgba(221,44,0,1);
+  --nav_item_font_size: 16px;
+  /* TOGGLE BARS VARIABLES */
+  --toggle_bars_bg_color: var(--top_header_bg_color);
+  --toggle_bars_color: var(--logo_color);
+  --toggle_bars_transition_duration: 0.5s;
+  /* TOGGLE MENU VARIABLES */
+  --toggle_menu_bg_color: var(--top_header_bg_color);
+  --toggle_menu_color: var(--nav_item_color);
+  --toggle_menu_font_family: 'Open Sans', sans-serif;
+  --toggle_menu_font_size: 22px;
+  --toggle_menu_padding: 8px;
+  --toggle_menu_font_weight: bold;
+  /* SHOWCASE VARIABLES */
+  --showcase_bg_color: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+  --showcase_height_desktop: 24vw; /* for desktop version */
+  --showcase_height_mobile: 30vh; /* for mobile version */
+}
+/* GENERAL MEDIA QUERIES FOR EACH AND EVERY DEVICE */
+@media screen {
+  /* TOP > SHOWCASE */
+  .main_showcase{
+    position: relative;
+    left: 0px;
+    width: 100%;
+    height: auto;
+    background: var(--showcase_bg_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* GENERAL MEDIA QUERIES FOR NOTEBOOKS TO DESKTOP DEVICES */
+@media screen and (min-width:769px) {
+  .nav_toggle_btn{
+    display: none;
+  }
+  .top_header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .main_header{
+    width: 100%;
+    height: var(--top_header_height_desktop);
+    background: var(--top_header_bg_color);
+    /* box-shadow: 0px 2px 6px 4px var(--top_header_shadow_color); */
+  }
+  .main_header_logo{
+    display: inline-block;
+    padding-left: 2.5%;
+  }
+  .main_header_logo_text{
+    font-family: var(--logo_font_family);
+    font-size: var(--logo_font_size_desktop);
+    color: var(--logo_color);
+    line-height: var(--logo_line_height_desktop);
+    cursor: pointer;
+  }
+  .navigation, .navigation_nav{
+    display: inline-block;
+    position: fixed;
+    top: 14px;
+    right: 2.5%;
+  }
+  .navigation_items{}
+  .navigation_item{
+    display: inline-block;
+  }
+  .navigation_item_link{
+    text-decoration: none;
+    padding: 4px 4px;
+    font-family: var(--nav_item_font_family);
+    font-size: var(--nav_item_font_size);
+    color: var(--nav_item_color);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .mobile_header{
+    display: none;
+  }
+  /* TOP > SHOWCASE */
+  .main_showcase{
+    top: var(--top_header_height_desktop);
+  }
+  /* TOP > MIDDLE_HEADER */
+  .middle_header{
+    position: relative;
+    top: var(--top_header_height_desktop);
+    left: 0px;
+    background-color: #e1e2e3;
+    height: 35px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+/* GENERAL MEDIA QUERIES FOR MOBILE TO TABLETS DEVICES */
+@media screen and (max-width:768px) {
+  .mobile_header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 100%;
+    background: var(--toggle_bars_bg_color);
+    height: var(--top_header_height_mobile);
+  }
+  .mobile_header .toggler{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    opacity: 0;
+  }
+  /* TOGGLER BARS SETUP */
+  .mobile_header .nav_toggle_bars{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    width: 25px;
+    height: 25px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .mobile_header .nav_toggle_bars > div {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background: var(--toggle_bars_color);
+    height: 3px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    transition: all var(--toggle_bars_transition_duration) ease;
+  }
+  .mobile_header .nav_toggle_bars > div::after,
+  .mobile_header .nav_toggle_bars > div::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    width: 100%;
+    height: 3px;
+    background-color: inherit;
+  }
+  .mobile_header .nav_toggle_bars > div::after{
+    top: 8px;
+  }
+  /* TOGGLER BARS ANIMATION SETUP */
+  .mobile_header .toggler:checked + .nav_toggle_bars > div {
+    transform: rotate(135deg);
+    background: var(--toggle_bars_color);
+  }
+  .mobile_header .toggler:checked + .nav_toggle_bars > div::after,
+  .mobile_header .toggler:checked + .nav_toggle_bars > div::before{
+    top: 0px;
+    transform: rotate(90deg);
+  }
+  .mobile_header .toggler:checked:hover + .nav_toggle_bars > div {
+    transform: rotate(360deg);
+  }
+  /* TOGGLE FUNTIONALITY SETUP */
+  .mobile_header .toggler:checked ~ .mobile_menu {
+    visibility: visible;
+  }
+  .mobile_header .toggler:checked ~ .mobile_menu > div {
+    transform: scale(1);
+  }
+  .mobile_header .toggler:checked ~ .mobile_menu > div > div {
+    opacity: 1;
+  }
+  /* TOGGLE MENU SETUP */
+  .mobile_header .mobile_menu {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+  }
+  .mobile_header .mobile_menu > div{
+    background: var(--toggle_menu_bg_color);
+    width: 175vw;
+    height: 175vw;
+    display: flex;
+    flex: none;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+  }
+  .mobile_header .mobile_menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vw;
+    opacity: 0;
+    transition: opacity var(--toggle_bars_transition_duration) ease;
+  }
+  .mobile_header .mobile_menu div > div > ul > li {
+    list-style: none;
+    color: var(--toggle_menu_color);
+    font-size: var(--toggle_menu_font_size);
+    padding: var(--toggle_menu_padding);
+  }
+  .mobile_header .mobile_menu div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    font-family: var(--toggle_menu_font_family);
+    font-weight: var(--toggle_menu_font_weight);
+  }
+  .mobile_main_logo_text{
+    text-align: center;
+    line-height: var(--logo_line_height_mobile);
+    font-family: var(--logo_font_family);
+    font-size: var(--logo_font_size_mobile);
+    color: var(--logo_color);
+    padding-top: 1px;
+  }
+  .desktop_header{
+    display: none;
+  }
+  /* TOP > SHOWCASE */
+  .main_showcase{
+    top: var(--top_header_height_mobile);
+  }
+  /* TOP > MIDDLE_HEADER */
+  .middle_header{
+    position: relative;
+    top: var(--top_header_height_mobile);
+    left: 0px;
+    background-color: lightgreen;
+    display: none;
+  }
+}
+/* MEDIA QUERIES FOR SHOWCASE SVG > MOBILES */
+@media screen and (min-width:320px) and (max-width:525px) {
+  .showcase_wide_svg,
+  .showcase_extra_wide_svg{
+    display: none;
+  }
+  .showcase_square_svg{
+    width: inherit;
+    height: inherit;
+  }
+}
+/* MEDIA QUERIES FOR SHOWCASE SVG > TABLETS */
+@media screen and (min-width:526px) and (max-width:1024px) {
+  .showcase_square_svg,
+  .showcase_extra_wide_svg{
+    display: none;
+  }
+  .showcase_wide_svg{
+    width: inherit;
+    height: inherit;
+  }
+}
+/* MEDIA QUERIES FOR SHOWCASE SVG > DESKTOPS */
+@media screen and (min-width:1025px) {
+  .showcase_square_svg,
+  .showcase_wide_svg{
+    display: none;
+  }
+  .showcase_extra_wide_svg{
+    width: inherit;
+    height: inherit;
+  }
+}
+
+
+
+/* END OF TOP.CSS */
+/*    SAADIGFX    */
