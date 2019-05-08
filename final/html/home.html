@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Salat</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../js/lib/PrayTime.js" type="text/javascript"></script>
+    <script src="../js/home_time_table.js"></script>
+    <script src="../js/middle.js"></script>
+    <script src="../js/top_cities_time.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat700,800,900|Open+Sans|Roboto:900|Oswald:700">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="../css/grid-setup.css">
+    <link rel="stylesheet" href="../css/top.css">
+    <link rel="stylesheet" href="../css/middle.css">
+  </head>
+  <body>
+    <!-- TOP SECTION OF THE PAGE STARTS FROM HERE -->
+    <div class="top">
+      <div class="top_header"><!-- TOP > TOP_HEADER SECTION OF THE PAGE STARTS FROM HERE -->
+        <header class="top_header">
+          <div class="mobile_header">
+            <div class="mobile_main_logo">
+              <h1 class="mobile_main_logo_text">The Salat</h1>
+            </div>
+            <input type="checkbox" class="toggler">
+            <div class="nav_toggle_bars">
+              <div></div>
+            </div>
+            <div class="mobile_menu">
+              <div>
+                <div>
+                  <ul>
+                    <li><a href="">Prayer Timings</a></li>
+                    <li><a href="">Daily Dua&apos;s</a></li>
+                    <li><a href="">Ramadan 2019</a></li>
+                    <li><a href="">Al Quran</a></li>
+                    <li><a href="">Hadith</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="desktop_header">
+            <div class="main_header">
+              <div class="main_header_logo">
+                <h1 class="main_header_logo_text">The Salat</h1>
+              </div>
+              <div class="navigation">
+                <nav class="navigation_nav">
+                  <ul class="navigation_items">
+                    <li class="navigation_item">
+                      <a href="" class="navigation_item_link">Prayer Timings</a>
+                    </li>
+                    <li class="navigation_item">
+                      <a href="" class="navigation_item_link">Daily Dua&apos;s</a>
+                    </li>
+                    <li class="navigation_item">
+                      <a href="" class="navigation_item_link">Ramadan 2019</a>
+                    </li>
+                    <li class="navigation_item">
+                      <a href="" class="navigation_item_link">Al Quran</a>
+                    </li>
+                    <li class="navigation_item">
+                      <a href="" class="navigation_item_link">Hadith</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div><!-- TOP_HEADER END -->
+      <div class="showcase"><!-- TOP > SHOWCASE SECTION OF THE PAGE STARTS FROM HERE -->
+        <div class="main_showcase">
+          <img src="../img/showcase_square.svg" class="showcase_square_svg" alt="﷽">
+          <img src="../img/showcase_wide.svg" class="showcase_wide_svg" alt="﷽">
+          <img src="../img/showcase_extra_wide.svg" class="showcase_extra_wide_svg" alt="﷽">
+        </div>
+      </div><!-- SHOWCASE END -->
+      <div class="bottom_header"><!-- TOP > BOTTOM_HEADER SECTION OF THE PAGE STARTS FROM HERE -->
+        <div class="middle_header">
+          <p>Suggest Some Ideas For This Section</p>
+        </div>
+      </div><!-- BOTTOM_HEADER END -->
+    </div><!-- TOP SECTION END -->
+    <div class="middle"><!-- MIDDLE SECTION OF THE PAGE STARTS FROM HERE -->
+      <div class="middle_left"><!-- MIDDLE > MIDDLE_LEFT SECTION OF THE PAGE STARTS FROM HERE -->
+        <div class="middle_left_time_table">
+          <div class="middle_left_time_table_A">
+            <input type="checkbox" class="time_table_A_toggle" id="time_table_A" checked>
+            <label for="time_table_A" class="time_table_A_label" id="tableA"></label>
+            <div class="collapsible_A">
+              <table>
+                <tr class="collapsible_A_table">
+                  <th scope="row">Fajr</th>
+                  <td id="tableA_R1"></td>
+                </tr>
+                <tr class="collapsible_A_table">
+                  <th scope="row">Dhuhr</th>
+                  <td id="tableA_R2"></td>
+                </tr>
+                <tr class="collapsible_A_table">
+                  <th scope="row">Asr</th>
+                  <td id="tableA_R3"></td>
+                </tr>
+                <tr class="collapsible_A_table">
+                  <th scope="row">Maghrib</th>
+                  <td id="tableA_R4"></td>
+                </tr>
+                <tr class="collapsible_A_table">
+                  <th scope="row">Isha</th>
+                  <td id="tableA_R5"></td>
+                </tr>
+                <tr class="collapsible_A_table">
+                  <th scope="row">Sunrise</th>
+                  <td id="tableA_R6"></td>
+                </tr>
+                <tr class="collapsible_A_table">
+                  <th scope="row">Sunset</th>
+                  <td id="tableA_R7"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="middle_left_time_table_B">
+            <input type="checkbox" class="time_table_B_toggle" id="time_table_B" checked>
+            <label for="time_table_B" class="time_table_B_label" id="tableB"></label>
+            <div class="collapsible_B">
+              <table>
+                <tr class="collapsible_B_table">
+                  <th scope="row">Fajr</th>
+                  <td id="tableB_R1"></td>
+                </tr>
+                <tr class="collapsible_B_table">
+                  <th scope="row">Dhuhr</th>
+                  <td id="tableB_R2"></td>
+                </tr>
+                <tr class="collapsible_B_table">
+                  <th scope="row">Asr</th>
+                  <td id="tableB_R3"></td>
+                </tr>
+                <tr class="collapsible_B_table">
+                  <th scope="row">Maghrib</th>
+                  <td id="tableB_R4"></td>
+                </tr>
+                <tr class="collapsible_B_table">
+                  <th scope="row">Isha</th>
+                  <td id="tableB_R5"></td>
+                </tr>
+                <tr class="collapsible_B_table">
+                  <th scope="row">Sunrise</th>
+                  <td id="tableB_R6"></td>
+                </tr>
+                <tr class="collapsible_B_table">
+                  <th scope="row">Sunset</th>
+                  <td id="tableB_R7"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="middle_left_time_table_C">
+            <input type="checkbox" class="time_table_C_toggle" id="time_table_C" checked>
+            <label for="time_table_C" class="time_table_C_label" id="tableC"></label>
+            <div class="collapsible_C">
+              <table>
+                <tr class="collapsible_C_table">
+                  <th scope="row">Fajr</th>
+                  <td id="tableC_R1"></td>
+                </tr>
+                <tr class="collapsible_C_table">
+                  <th scope="row">Dhuhr</th>
+                  <td id="tableC_R2"></td>
+                </tr>
+                <tr class="collapsible_C_table">
+                  <th scope="row">Asr</th>
+                  <td id="tableC_R3"></td>
+                </tr>
+                <tr class="collapsible_C_table">
+                  <th scope="row">Maghrib</th>
+                  <td id="tableC_R4"></td>
+                </tr>
+                <tr class="collapsible_C_table">
+                  <th scope="row">Isha</th>
+                  <td  id="tableC_R5"></td>
+                </tr>
+                <tr class="collapsible_C_table">
+                  <th scope="row">Sunrise</th>
+                  <td id="tableC_R6"></td>
+                </tr>
+                <tr class="collapsible_C_table">
+                  <th scope="row">Sunset</th>
+                  <td  id="tableC_R7"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+          <div class="middle_left_time_table_D">
+            <input type="checkbox" class="time_table_D_toggle" id="time_table_D" checked>
+            <label for="time_table_D" class="time_table_D_label" id="tableD"></label>
+            <div class="collapsible_D">
+              <table>
+                <tr class="collapsible_D_table">
+                  <th scope="row">Fajr</th>
+                  <td id="tableD_R1"></td>
+                </tr>
+                <tr class="collapsible_D_table">
+                  <th scope="row">Dhuhr</th>
+                  <td id="tableD_R2"></td>
+                </tr>
+                <tr class="collapsible_D_table">
+                  <th scope="row">Asr</th>
+                  <td id="tableD_R3"></td>
+                </tr>
+                <tr class="collapsible_D_table">
+                  <th scope="row">Maghrib</th>
+                  <td id="tableD_R4"></td>
+                </tr>
+                <tr class="collapsible_D_table">
+                  <th scope="row">Isha</th>
+                  <td id="tableD_R5"></td>
+                </tr>
+                <tr class="collapsible_D_table">
+                  <th scope="row">Sunrise</th>
+                  <td id="tableD_R6"></td>
+                </tr>
+                <tr class="collapsible_D_table">
+                  <th scope="row">Sunset</th>
+                  <td id="tableD_R7"></td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="middle_left_ayat_of_the_day_contanier">
+          <p>AYAT OF THE DAY</p>
+        </div>
+      </div><!-- MIDDLE_LEFT END -->
+      <div class="middle_right"><!-- MIDDLE > MIDDLE_RIGHT SECTION OF THE PAGE STARTS FROM HERE -->
+
+      </div><!-- MIDDLE_RIGHT END -->
+    </div><!-- MIDDLE SECTION END -->
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+    <div class="bottom"><!-- BOTTOM SECTION OF THE PAGE STARTS FROM HERE -->
+      <div class="footer"><!-- BOTTOM > FOOTER SECTION OF THE PAGE STARTS FROM HERE -->
+        <p>FOOTER</p>
+      </div><!-- FOOTER END -->
+    </div><!-- BOTTOM END -->
+    <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+  </body>
+</html>
