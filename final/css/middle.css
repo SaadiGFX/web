@@ -1,0 +1,203 @@
+/* ALL VARIABLES FOR MIDDLE.CSS > FOR ALL DEVICES */
+:root{
+  /* VARIABLES FOR TABLE TITLE */
+  --table_title_font_family: 'Montserrat700', sans-serif;
+  --table_title_font_size: 18px;
+  --table_title_padding: 8px;
+  /* VARIABLES FOR TABLE DATA */
+  --table_data_font_size: 16px;
+  --table_data_font_family: 'Roboto', sans-serif;
+  --table_data_padding: 4px;
+  /* VARIABLE FOR TABLE_A */
+  --table_A_title_bg_color: #000;
+  --table_A_title_color: #fff;
+  --table_A_border: 1px solid #000;
+  --table_A_color: #000;
+  --table_A_bg_color: #fff;
+  /* VARIABLE FOR TABLE_B */
+  --table_B_title_bg_color: #000;
+  --table_B_title_color: #fff;
+  --table_B_border: 1px solid #000;
+  --table_B_color: #000;
+  --table_B_bg_color: #fff;
+  /* VARIABLE FOR TABLE_C */
+  --table_C_title_bg_color: #000;
+  --table_C_title_color: #fff;
+  --table_C_border: 1px solid #000;
+  --table_C_color: #000;
+  --table_C_bg_color: #fff;
+  /* VARIABLE FOR TABLE_D */
+  --table_D_title_bg_color: #000;
+  --table_D_title_color: #fff;
+  --table_D_border: 1px solid #000;
+  --table_D_color: #000;
+  --table_D_bg_color: #fff;
+}
+/* MIDDLE > MIDDLE_LEFT > MIDDLE_LEFT_TIME_TABLE */
+.middle_left_time_table{
+  box-sizing: border-box;
+  margin: 0.5em;
+}
+.middle_left_time_table_A, .middle_left_time_table_B, .middle_left_time_table_C, .middle_left_time_table_D{
+  box-sizing: border-box;
+  margin: 0.5em;
+}
+/* TO HIDE ANY INPUT WHICH IS CHECKBOX TYPE */
+input[type='checkbox'] {
+  display: none;
+}
+/* COLLAPSE SETUP FOR TABLE_A */
+.time_table_A_label{
+  display: block;
+  text-align: center;
+  padding: var(--table_title_padding);
+  background-color: var(--table_A_title_bg_color);
+  color: var(--table_A_title_color);
+  font-size: var(--table_title_font_size);
+  font-family: var(--table_title_font_family);
+}
+/* TO HIDDE TABLE_A DATA WHEN CHECKBOX IS NOT CHECKED */
+.collapsible_A{
+  overflow: hidden;
+  max-height: 0px;
+}
+/* TO GIVE TABLE_A BORDER */
+.collapsible_A > table{
+  border: var(--table_A_border);
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--table_A_color);
+  background: var(--table_A_bg_color);
+}
+/* TO GIVE TABLE_A'S TABLE_DATA AND TABLE_HEAD BORDER */
+.collapsible_A_table > td, .collapsible_A_table > th{
+  border: var(--table_A_border);
+  text-align: center;
+  padding: var(--table_data_padding);
+}
+/* TO SHOW TABLE_A WHEN CHECKBOX IS CHECKED */
+.time_table_A_toggle:checked + .time_table_A_label + .collapsible_A{
+  max-height: 500px;
+}
+/* COLLAPSE SETUP FOR TABLE_B */
+.time_table_B_label{
+  display: block;
+  text-align: center;
+  padding: var(--table_title_padding);
+  background-color: var(--table_B_title_bg_color);
+  color: var(--table_B_title_color);
+  font-size: var(--table_title_font_size);
+  font-family: var(--table_title_font_family);
+}
+/* TO HIDDE TABLE_B DATA WHEN CHECKBOX IS NOT CHECKED */
+.collapsible_B{
+  overflow: hidden;
+  max-height: 0px;
+}
+/* TO GIVE TABLE_B BORDER */
+.collapsible_B > table{
+  border: var(--table_B_border);
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--table_B_color);
+  background: var(--table_B_bg_color);
+}
+/* TO GIVE TABLE_B'S TABLE_DATA AND TABLE_HEAD BORDER */
+.collapsible_B_table > td, .collapsible_B_table > th{
+  border: var(--table_B_border);
+  text-align: center;
+  padding: var(--table_data_padding);
+}
+/* TO SHOW TABLE_B WHEN CHECKBOX IS CHECKED */
+.time_table_B_toggle:checked + .time_table_B_label + .collapsible_B{
+  max-height: 500px;
+}
+/* COLLAPSE SETUP FOR TABLE_C */
+.time_table_C_label{
+  display: block;
+  text-align: center;
+  padding: var(--table_title_padding);
+  background-color: var(--table_C_title_bg_color);
+  color: var(--table_C_title_color);
+  font-size: var(--table_title_font_size);
+  font-family: var(--table_title_font_family);
+}
+/* TO HIDDE TABLE_C DATA WHEN CHECKBOX IS NOT CHECKED */
+.collapsible_C{
+  overflow: hidden;
+  max-height: 0px;
+}
+/* TO GIVE TABLE_C BORDER */
+.collapsible_C > table{
+  border: var(--table_C_border);
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--table_C_color);
+  background: var(--table_C_bg_color);
+}
+/* TO GIVE TABLE_C'S TABLE_DATA AND TABLE_HEAD BORDER */
+.collapsible_C_table > td, .collapsible_C_table > th{
+  border: var(--table_C_border);
+  text-align: center;
+  padding: var(--table_data_padding);
+}
+/* TO SHOW TABLE_C WHEN CHECKBOX IS CHECKED */
+.time_table_C_toggle:checked + .time_table_C_label + .collapsible_C{
+  max-height: 500px;
+}
+/* COLLAPSE SETUP FOR TABLE_D */
+.time_table_D_label{
+  display: block;
+  text-align: center;
+  padding: var(--table_title_padding);
+  background-color: var(--table_D_title_bg_color);
+  color: var(--table_D_title_color);
+  font-size: var(--table_title_font_size);
+  font-family: var(--table_title_font_family);
+}
+/* TO HIDDE TABLE_D DATA WHEN CHECKBOX IS NOT CHECKED */
+.collapsible_D{
+  overflow: hidden;
+  max-height: 0px;
+}
+/* TO GIVE TABLE_D BORDER */
+.collapsible_D > table{
+  border: var(--table_D_border);
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--table_D_color);
+  background: var(--table_D_bg_color);
+}
+/* TO GIVE TABLE_D'S TABLE_DATA AND TABLE_HEAD BORDER */
+.collapsible_D_table > td, .collapsible_D_table > th{
+  border: var(--table_D_border);
+  text-align: center;
+  padding: var(--table_data_padding);
+}
+/* TO SHOW TABLE_D WHEN CHECKBOX IS CHECKED */
+.time_table_D_toggle:checked + .time_table_D_label + .collapsible_D{
+  max-height: 500px;
+}
+
+
+
+
+
+
+@media screen and (min-width:769px) {
+  /* MIDDLE POSITION FIX */
+  .middle{
+    position: relative;
+    top: var(--top_header_height_desktop);
+    left: 0px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  /* MIDDLE POSITION FIX */
+  .middle{
+    position: relative;
+    top: var(--top_header_height_mobile);
+    left: 0px;
+  }
+}

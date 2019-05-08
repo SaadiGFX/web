@@ -1,0 +1,41 @@
+* {margin: 0; padding: 0;}
+/* Grid-Setup for top */
+.top_header{grid-area: top_header;}
+.showcase{grid-area: showcase;}
+.bottom_header{grid-area: bottom_header;}
+.top{display: grid; grid-template-areas: "top_header""showcase""bottom_header";}
+/* Grid-Setup for middle */
+.middle{display: grid; grid-auto-columns: 25%; grid-template-areas: "middle_left middle_left middle_left middle_right"; max-width: 1280px; margin-left: auto; margin-right: auto;}
+/* Grid-Setup for middle_left */
+.middle_left{grid-area: middle_left; background-color: #f4f4f4;}
+/* Grid-Setup for middle_left_time_table */
+.middle_left_time_table{display: grid; grid-auto-columns: 25%;grid-template-areas: "middle_left_time_table_A middle_left_time_table_B middle_left_time_table_C middle_left_time_table_D";}
+/* Grid-Setup for middle_left_time_table_A */
+.middle_left_time_table_A{grid-area: middle_left_time_table_A; max-width: 100%}
+/* Grid-Setup for middle_left_time_table_B */
+.middle_left_time_table_B{grid-area: middle_left_time_table_B; max-width: 100%}
+/* Grid-Setup for middle_left_time_table_C */
+.middle_left_time_table_C{grid-area: middle_left_time_table_C; max-width: 100%}
+/* Grid-Setup for middle_left_time_table_D */
+.middle_left_time_table_D{grid-area: middle_left_time_table_D; max-width: 100%}
+/* Grid-Setup for middle_right */
+.middle_right{grid-area: middle_right; background-color:  silver; height: 750px;}
+/* Grid-Setup for bottom */
+.footer{grid-area: footer; max-width: 1280px; margin-left: auto; margin-right: auto; height: 100px; background-color: yellow;position: relative; top: var(--top_header_height_desktop); left: 0;}
+.bottom{display: grid; grid-template-areas: "footer";}
+
+/* GRID-SETUP MEDIA QUERIES > NOTEBOOKS */
+@media screen and (min-width:826px) and (max-width:1024px) {
+  .middle{grid-auto-columns: 100%; grid-template-areas: "middle_left" "middle_right";}
+  .middle_left_time_table{grid-auto-columns: 25%; grid-template-areas: "middle_left_time_table_A middle_left_time_table_B middle_left_time_table_C middle_left_time_table_D";}
+}
+/* GRID-SETUP MEDIA QUERIES > TABLETS */
+@media screen and (min-width:526px) and (max-width:825px) {
+  .middle{grid-auto-columns: 100%; grid-template-areas: "middle_left" "middle_right";}
+  .middle_left_time_table{grid-auto-columns: 50%; grid-template-areas: "middle_left_time_table_A middle_left_time_table_B" "middle_left_time_table_C middle_left_time_table_D";}
+}
+/* GRID-SETUP MEDIA QUERIES > MOBILES */
+@media screen and (min-width:320px) and (max-width:525px) {
+  .middle{grid-auto-columns: 100%; grid-template-areas: "middle_left" "middle_right";}
+  .middle_left_time_table{grid-auto-columns: 100%; grid-template-areas: "middle_left_time_table_A" "middle_left_time_table_B" "middle_left_time_table_C" "middle_left_time_table_D";}
+}
